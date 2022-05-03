@@ -21,5 +21,9 @@ describe("Pruebas a FizzBuzz", ()=>{
         const peticion = FizzBuzzService.applyValidationInExplorer(explorer);
         expect(peticion.trick).toBe("FIZZBUZZ")
     })
+    test("Prueba 5: Nuevo requerimiento FizzBuzz",()=>{
+        const peticion = FizzBuzzService.applyValidationInNumber(15);
+        expect(peticion).toBe("Fizzbuzz");
+    })
     
 })

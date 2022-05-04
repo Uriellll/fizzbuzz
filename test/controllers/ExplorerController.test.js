@@ -1,6 +1,7 @@
+const express = require('express');
 const ExplorerController = require('./../../lib/controllers/ExplorerController');
 describe("Pruebas para el Explorer controller",()=>{
-    test("Prueba para obtener explorer por mision", ()=>{
+    /* test("Prueba para obtener explorer por mision", ()=>{
         const explorers =ExplorerController.getExplorersByMission('java');
         expect(explorers.length).toBe(5)
     })
@@ -11,5 +12,9 @@ describe("Pruebas para el Explorer controller",()=>{
     test("Obtener cantidad de usuarios por misión", ()=>{
         const userExplorersLength = ExplorerController.getExplorersAmonutByMission('node');
         expect(userExplorersLength).toBe(10);
+    }) */
+    test("Aplicando validación en número", ()=>{
+        const value = ExplorerController.applyValidationInNumber(3);
+        expect(value).toBe("Fizzz");
     })
 })

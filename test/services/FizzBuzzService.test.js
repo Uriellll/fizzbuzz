@@ -25,5 +25,9 @@ describe("Pruebas a FizzBuzz", ()=>{
         const peticion = FizzBuzzService.applyValidationInNumber(15);
         expect(peticion).toBe("Fizzbuzz");
     })
+    test("Prueba 6: Regresar nombres de Explorers filtrados por misión",()=>{
+        const peticion = FizzBuzzService.applyValidationInNumber('java');
+        expect(peticion).toStrictEqual(['Woopa6','Woopa7','Woopa8','Woopa9','Woopa10']);
+    })
     
 })
